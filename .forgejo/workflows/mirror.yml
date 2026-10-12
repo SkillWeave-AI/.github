@@ -1,0 +1,18 @@
+name: Mirror to GitHub
+on:
+  push:
+    branches: [main]
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: https://github.com/actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Push to the public GitHub mirror
+        env:
+          GH_TOKEN: ${{ secrets.GH_MIRROR_TOKEN }}
+        run: |
+          git remote add github-mirror "https://x-access-token:${GH_TOKEN}@github.com/SkillWeave-AI/.github.git"
+          git push --force github-mirror main
