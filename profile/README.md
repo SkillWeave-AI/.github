@@ -1,6 +1,9 @@
 <p align="center">
   <a href="https://skillweave.xyz">
-    <img src="https://raw.githubusercontent.com/SkillWeave-AI/.github/main/profile/skillweave-banner.svg" alt="SkillWeave" width="640">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SkillWeave-AI/.github/main/profile/skillweave-brand-dark.svg">
+      <img src="https://raw.githubusercontent.com/SkillWeave-AI/.github/main/profile/skillweave-brand-light.svg" alt="SkillWeave" width="420">
+    </picture>
   </a>
 </p>
 
